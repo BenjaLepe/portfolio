@@ -18,4 +18,4 @@ RUN bundle install
 # Copy application code
 COPY . .
 
-CMD ["bundle", "exec", "ruby", "test_portfolio.rb"]
+CMD ["bundle", "exec", "ruby", "main.rb"]

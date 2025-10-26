@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.2.5'
+ruby '>= 3.0.0'
 
 # Development and testing gems
 gem 'minitest', '~> 5.0'

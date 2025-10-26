@@ -1,29 +1,25 @@
+# frozen_string_literal: true
+
+# PortfolioStock model that represents a relationship between a stock and a percentage of the portfolio.
+# Also stores the shares of the stock in the portfolio.
 class PortfolioStock
-  attr_reader :stock, :percentage, :quantity
+  attr_reader :stock, :percentage, :shares
 
   def initialize(stock, percentage)
     @stock = stock
     @percentage = percentage
-    @quantity = 0
+    @shares = 0
   end
 
-  def deposit(amount)
-    @quantity += amount
+  def buy(amount)
+    @shares += amount / @stock.price
   end
 
-  def withdraw(amount)
-    @quantity -= amount
+  def sell(amount)
+    @shares -= amount / @stock.price
   end
 
   def value
-    @quantity * @stock.price
-  end
-
-  def code
-    @stock.code
-  end
-
-  def price
-    @stock.price
+    @shares * @stock.price
   end
 end

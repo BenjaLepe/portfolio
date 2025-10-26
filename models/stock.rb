@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Stock model that represents a stock with a code and a price
 class Stock
   attr_reader :code, :price
 
